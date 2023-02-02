@@ -1,15 +1,13 @@
-console.log('test');
+console.log("hello");
 
-
-async function createUser(){
-
-const response = await fetch("http://localhost:3000/users/user/create", {
-method: 'POST',
-headers: {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json'
-},
-body: `
+async function createUser() {
+  const response = await fetch("http://localhost:3000/users/user/create", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: `
 {
     "username": "Alejandro",
     "email": "test",
@@ -18,10 +16,10 @@ body: `
 }
   
   `,
-});
+  });
 
-response.json().then(data => {
-  console.log(data);
-});
+  response.json().then(data => {
+    console.log(data);
+  });
 }
 
